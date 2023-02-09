@@ -26,31 +26,31 @@ stages:
     params:
       params.yaml:
         train.batch_size: 128
-        train.dropout: 0.4
+        train.dropout: 0.45
         train.hidden_units: 64
         train.lr: 0.001
         train.num_epochs: 10
     outs:
     - path: dvclive/metrics.json
       hash: md5
-      md5: 4dfa1eda50918a387d4bd94dca7280e5
+      md5: 53b59b7eafe7d45bf395b5c5df879a58
       size: 54
     - path: dvclive/plots/metrics/accuracy.tsv
       hash: md5
-      md5: b14f1cc97c8786fa5a72b625b38c411c
-      size: 222
+      md5: 00a8ff95f0a3e309ed15a9b72e8ff68c
+      size: 224
     - path: output/myfmmodel.keras
       hash: md5
-      md5: 7b26e4133c9e27636775ba4952b0e4b5
+      md5: 10daac9a86985aa70813fbe8e29ffecd
       size: 3681312
     - path: output/myfmmodel.tar.gz
       hash: md5
-      md5: 85ae46be093f80568ad84c894abd0ab9
-      size: 3429642
+      md5: bdcb1bb73f220f0b92febae1a6bfa6d8
+      size: 3423987
     - path: output/train_logs.csv
       hash: md5
-      md5: 21db0fa1402f98b6762ee1b2cb80bb18
-      size: 420
+      md5: 98241e91334a47c86906113e8a233169
+      size: 424
   evaluate:
     cmd: python src/evaluate.py
     deps:
@@ -60,7 +60,7 @@ stages:
       size: 54950285
     - path: output/myfmmodel.keras
       hash: md5
-      md5: 7b26e4133c9e27636775ba4952b0e4b5
+      md5: 10daac9a86985aa70813fbe8e29ffecd
       size: 3681312
     - path: src/evaluate.py
       hash: md5
@@ -69,14 +69,14 @@ stages:
     outs:
     - path: output/metrics.json
       hash: md5
-      md5: 3ff9f75d3092a0bf5c936d7da2a29e4d
+      md5: 29da69db3f15401251541a30de8bb962
       size: 61
     - path: output/predictions.json
       hash: md5
-      md5: 336fadbcd5c3f29eeb2cd88f77c8f43d
+      md5: 66612dc64297e15b364b95802ad17da1
       size: 310000
     - path: output/test/samples_of_mispredicted_images/
       hash: md5
-      md5: 0cc4bcca1e5b08d5d8c03883c5ff8592.dir
-      size: 175626
+      md5: 58a2ec38ae0ccc2d9daf96c7a0a478ba.dir
+      size: 178018
       nfiles: 10
