@@ -27,30 +27,30 @@ stages:
       params.yaml:
         train.batch_size: 128
         train.dropout: 0.45
-        train.hidden_units: 64
+        train.hidden_units: 128
         train.lr: 0.001
         train.num_epochs: 10
     outs:
     - path: dvclive/metrics.json
       hash: md5
-      md5: 53b59b7eafe7d45bf395b5c5df879a58
+      md5: 0a1fa815bccd0149da36c58d82beccfa
       size: 54
     - path: dvclive/plots/metrics/accuracy.tsv
       hash: md5
-      md5: 00a8ff95f0a3e309ed15a9b72e8ff68c
-      size: 224
+      md5: 581551f4b07b6012406e2d183882c047
+      size: 223
     - path: output/myfmmodel.keras
       hash: md5
-      md5: 10daac9a86985aa70813fbe8e29ffecd
-      size: 3681312
+      md5: 7dccd3ff46a61b8b5041e0cfcb49367a
+      size: 7324888
     - path: output/myfmmodel.tar.gz
       hash: md5
-      md5: bdcb1bb73f220f0b92febae1a6bfa6d8
-      size: 3423987
+      md5: ff92d5acdfd4a1cdaf544f313f932292
+      size: 6817060
     - path: output/train_logs.csv
       hash: md5
-      md5: 98241e91334a47c86906113e8a233169
-      size: 424
+      md5: b4a4ec5fd7cd2bc8ec424bf19ffb1568
+      size: 425
   evaluate:
     cmd: python src/evaluate.py
     deps:
@@ -60,8 +60,8 @@ stages:
       size: 54950285
     - path: output/myfmmodel.keras
       hash: md5
-      md5: 10daac9a86985aa70813fbe8e29ffecd
-      size: 3681312
+      md5: 7dccd3ff46a61b8b5041e0cfcb49367a
+      size: 7324888
     - path: src/evaluate.py
       hash: md5
       md5: d55658c1947e760905f8784a695033b4
@@ -69,14 +69,14 @@ stages:
     outs:
     - path: output/metrics.json
       hash: md5
-      md5: 29da69db3f15401251541a30de8bb962
-      size: 61
+      md5: 9c85d467c9fd73e3d884b8a8709145da
+      size: 60
     - path: output/predictions.json
       hash: md5
-      md5: 66612dc64297e15b364b95802ad17da1
+      md5: 9e55d119e10d002a5e181826de4a798a
       size: 310000
     - path: output/test/samples_of_mispredicted_images/
       hash: md5
-      md5: 58a2ec38ae0ccc2d9daf96c7a0a478ba.dir
-      size: 178018
+      md5: 18490f71fea6e6bc4eef4efdba803c88.dir
+      size: 173735
       nfiles: 10
