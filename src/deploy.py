@@ -79,7 +79,7 @@ except Exception as e:
     raise
     
 
-endpoint_name = f'td-fm-ep-{stage}'
+endpoint_name = f'pool-segmentation-{stage}'
 try:
     create_endpoint_response = sagemaker_client.create_endpoint(
                                                 EndpointName=endpoint_name, 
